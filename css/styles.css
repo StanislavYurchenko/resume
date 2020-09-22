@@ -68,10 +68,10 @@ body {
   font-weight: 400;
   line-height: 24px;
   text-decoration: underline;
+  width: 100%;
 }
 
 .contacts-link-type {
-  display: block;
   width: 14px;
   color: #ffffff;
   font-size: 14px;
@@ -79,6 +79,7 @@ body {
   line-height: 24px;
   text-transform: uppercase;
   padding-right: 10px;
+  width: 100%;
 }
 
 .skills-container {
