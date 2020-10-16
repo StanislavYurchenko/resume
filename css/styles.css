@@ -86,16 +86,25 @@ body {
   margin: 55px 40px 0 40px;
 }
 
-.skill__item {
+aside .skill__item {
   color: #ff6b08;
   font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
   margin-left: 15px;
 }
 
-.skill__item-color {
+.skill__item {
+  color: #ff6b08;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+aside .skill__item-color {
   color: #ffffff;
+}
+
+.skill__item-color {
+  color: #000000;
 }
 
 .position {
