@@ -82,14 +82,15 @@ body {
   width: 100%;
 }
 
-.skills-container {
+.aside-container {
   margin: 55px 40px 0 40px;
 }
 
-aside .skill__item {
+.aside__item {
   color: #ff6b08;
   font-size: 14px;
   margin-left: 15px;
+  line-height: 24px;
 }
 
 .skill__item {
@@ -99,7 +100,7 @@ aside .skill__item {
   line-height: 24px;
 }
 
-aside .skill__item-color {
+.aside__item-color {
   color: #ffffff;
 }
 
