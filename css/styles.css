@@ -21,25 +21,27 @@
 body {
   font-family: Montserrat, sans-serif;
   background-color: #f4f6f9;
-  padding: 10px;
+  padding: 20px;
 }
 
 .wrapper {
   background-color: #fff;
   display: flex;
-  max-width: 1200px;
   margin: 0 auto;
+  max-width: 1200px;
+  min-width: 700px;
 }
 
 .sidebar {
   background-color: #1e2939;
-  width: 320px;
+  width: 260px;
   padding: 100px 0;
 }
 
 .my-photo {
   display: block;
-  width: 300px;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
 }
 
@@ -172,10 +174,10 @@ body {
   color: #595959;
 }
 
-.work__position {
+/* .work__position {
   color: #000000;
   margin-bottom: 10px;
-}
+} */
 
 .work__company {
   font-weight: 700;
@@ -185,7 +187,7 @@ body {
 .data {
   color: #a8a8a8;
   font-size: 12px;
-  margin-bottom: 10px;
+  font-weight: normal;
 }
 
 .separator {
@@ -201,6 +203,7 @@ body {
   margin-left: 17px;
 }
 
+.work__position,
 .specialty {
   color: #000000;
   font-size: 14px;
@@ -210,7 +213,7 @@ body {
 }
 
 .work {
-  margin-bottom: 30px;
+  /* margin-bottom: 20px; */
 }
 
 .university {
@@ -223,10 +226,30 @@ body {
 }
 
 .education__item:not(:last-child) {
-  padding-bottom: 25px;
+  margin-bottom: 10px;
+}
+
+.skils__wraper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill__list {
+  display: inline-block;
+  width: 45%;
+  padding: 5px 10px;
 }
 
 @media print {
+  body {
+    padding: 0;
+    width: 100px;
+    height: 1414px;
+  }
+  .main__container {
+    padding: 0 10px;
+    padding: 0;
+  }
   .social,
   .projects {
     display: none;
