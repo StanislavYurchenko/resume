@@ -46,7 +46,7 @@ body {
 }
 
 .main__container {
-  padding: 50px 50px;
+  padding: 50px;
 }
 .contact {
 }
@@ -90,14 +90,14 @@ body {
 
 .aside__item {
   color: #ff6b08;
-  font-size: 14px;
+  font-size: 16px;
   margin-left: 15px;
   line-height: 24px;
 }
 
 .skill__item {
   color: #ff6b08;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 24px;
 }
@@ -115,7 +115,7 @@ body {
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .name {
@@ -127,14 +127,14 @@ body {
 
 .description {
   color: #595959;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 28px;
   margin-top: 20px;
 }
 
 .section {
-  margin-bottom: 45px;
+  margin-bottom: 40px;
 }
 
 .sidebar .section__title {
@@ -186,7 +186,7 @@ body {
 
 .data {
   color: #a8a8a8;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: normal;
 }
 
@@ -206,7 +206,7 @@ body {
 .work__position,
 .specialty {
   color: #000000;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 24px;
   margin-bottom: 10px;
@@ -226,7 +226,7 @@ body {
 }
 
 .education__item:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .skils__wraper {
@@ -243,15 +243,25 @@ body {
 @media print {
   body {
     padding: 0;
-    width: 100px;
+    width: 1000px;
     height: 1414px;
   }
-  .main__container {
-    padding: 0 10px;
-    padding: 0;
+
+  body * {
+    color: #000 !important;
   }
+
+  .main__container {
+    /* padding: 0 10px; */
+  }
+
   .social,
   .projects {
     display: none;
+  }
+
+  .contacts-container,
+  .aside-container {
+    margin-left: 5px;
   }
 }
