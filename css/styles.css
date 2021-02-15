@@ -167,6 +167,11 @@ body {
   line-height: 24px;
 }
 
+.project-list__about {
+  display: inline-block;
+  margin-left: 10px;
+}
+
 .project-list__tech {
   font-family: 'Montserrat - Regular';
   font-size: 14px;
