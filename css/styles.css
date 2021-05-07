@@ -166,7 +166,7 @@ body {
 
 .project-list__link {
   color: #000000;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 24px;
 }
 
@@ -177,7 +177,7 @@ body {
 
 .project-list__tech {
   font-family: 'Montserrat - Regular';
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   color: #595959;
 }
@@ -249,7 +249,7 @@ body {
 }
 
 .description__work {
-  margin-bottom: 20px;
+  margin: 0 0 15px;
 }
 
 @media print {
