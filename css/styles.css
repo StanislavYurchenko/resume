@@ -127,9 +127,10 @@ body {
 .header {
   display: flex;
   align-items: top;
+  flex-direction: column;
   gap: 10px;
-  justify-content: space-between;
-  margin-bottom: 20px
+  justify-content: center;
+  margin-bottom: 0 auto 20px 0;
 }
 
 .position {
@@ -264,6 +265,7 @@ body {
 
 .buttons {
   display: flex;
+  justify-content: start;
   gap: 10px;
 }
 
@@ -320,6 +322,11 @@ body {
 @media (min-width: 768px) {
   body {
     padding: 20px;
+  }
+
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .wrapper {
