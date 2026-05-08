@@ -262,9 +262,9 @@ body {
   margin: 0 0 15px;
 }
 
-.cta-container {
-  margin: 20px 0;
-  text-align: center;
+.buttons {
+  display: flex;
+  gap: 10px;
 }
 
 .upwork-button {
@@ -292,11 +292,10 @@ body {
   transition: background-color 0.3s;
 }
 
-.download-btn button:hover {
+.download-btn button:hover,
+.download-btn a:hover {
   background-color: #e55a00;
 }
-
-
 
 .skip-link {
   position: absolute;
