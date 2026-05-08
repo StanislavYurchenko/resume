@@ -36,6 +36,16 @@ body {
   width: 100%;
   padding: 50px 20px;
   text-align: center;
+  
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  width: 200px;
+  margin: 0 auto;
 }
 
 .my-photo {
@@ -52,6 +62,7 @@ body {
 .link {
   color: inherit;
 }
+
 .contacts-container > div:not(:last-child) {
   margin-bottom: 10px;
 }
@@ -88,6 +99,7 @@ body {
 
 .aside-container {
   margin: 55px 40px 0 40px;
+  width: 100%;
 }
 
 .aside__item {
@@ -222,10 +234,6 @@ body {
   margin-bottom: 10px;
 }
 
-.work {
-  /* margin-bottom: 20px; */
-}
-
 .university {
   margin-bottom: 10px;
 }
@@ -254,12 +262,25 @@ body {
   margin: 0 0 15px;
 }
 
+.cta-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.upwork-button {
+  text-decoration: none;
+  display: inline-block;
+  font-family: sans-serif;
+}
+
 .download-btn {
+  display: inline;
   text-align: right;
   margin: 10px 0;
 }
 
-.download-btn button {
+.download-btn .button,
+.download-btn .upwork-button {
   background-color: #ff6b08;
   color: #ffffff;
   padding: 8px 16px;
@@ -274,6 +295,8 @@ body {
 .download-btn button:hover {
   background-color: #e55a00;
 }
+
+
 
 .skip-link {
   position: absolute;
@@ -308,7 +331,6 @@ body {
 
   .sidebar {
     width: 260px;
-    padding: 100px 0;
     text-align: left;
   }
 
