@@ -93,6 +93,7 @@
         text-decoration: none;
         transition: color 0.2s;
       }
+
       .contacts-link:hover {
         color: #ea580c;
       }
@@ -126,6 +127,7 @@
         text-decoration: none;
         transition: color 0.2s;
       }
+
       a.aside__item-color:hover {
         color: #ea580c;
       }
@@ -220,12 +222,6 @@
         margin-bottom: 5px;
       }
 
-      ul.work-tasks {
-        margin-top: 10px;
-        margin-bottom: 25px;
-        padding-left: 20px;
-      }
-
       .work__position-task {
         color: #475569;
         font-size: 15px;
@@ -237,9 +233,9 @@
       .education__item {
         list-style: none;
         position: relative;
+        margin-bottom: 25px;
       }
       
-      /* Таймлайн стилі для досвіду */
       section > ul {
         border-left: 2px solid #e2e8f0;
         padding-left: 25px;
@@ -254,7 +250,7 @@
         height: 12px;
         background-color: #ea580c;
         border-radius: 50%;
-        left: -32px;
+        left: -34px;
         top: 6px;
         border: 2px solid #fff;
       }
@@ -279,7 +275,7 @@
         border: none;
         font-size: 14px;
         font-weight: 600;
-        border-radius: 6px; /* Більш сучасні заокруглення */
+        border-radius: 6px;
         cursor: pointer;
         text-decoration: none;
         transition: background-color 0.2s, transform 0.1s;
@@ -289,10 +285,18 @@
         background-color: #0f172a;
       }
 
-      .upwork-button:hover { background-color: #c2410c; }
-      .button:hover { background-color: #1e293b; }
+      .upwork-button:hover { 
+        background-color: #c2410c; 
+      }
+
+      .button:hover { 
+        background-color: #1e293b; 
+      }
       
-      .upwork-button:active, .button:active { transform: translateY(1px); }
+      .upwork-button:active, 
+      .button:active { 
+        transform: translateY(1px); 
+      }
 
       .skip-link {
         position: absolute;
@@ -319,6 +323,7 @@
           justify-content: space-between;
           align-items: center;
         }
+
         .buttons { margin-top: 0; }
         .wrapper {
           display: flex;
@@ -326,39 +331,212 @@
           max-width: 1100px;
           border-radius: 12px;
         }
+
         .sidebar {
           width: 320px;
           border-top-left-radius: 12px;
           border-bottom-left-radius: 12px;
         }
+
         .main__container {
           padding: 60px 70px;
           flex: 1;
         }
-        .position { font-size: 18px; }
-        .name { font-size: 36px; }
+
+        .position { 
+          font-size: 18px; 
+        }
+
+        .name { 
+          font-size: 36px; 
+        }
       }
 
-      @media print {
-        @page { margin: 0; }
-        body { padding: 0; background: #fff; }
-        .wrapper {
-          display: flex !important;
-          max-width: 100%;
-          box-shadow: none;
-          border-radius: 0;
-        }
-        .sidebar {
-          width: 280px !important;
-          padding: 40px 20px !important;
-          background-color: #f8fafc !important; 
-          color: #0f172a !important;
-          border-radius: 0 !important;
-        }
-        .sidebar .section__title, .contacts-link-type { color: #0f172a !important; border-color: #cbd5e1 !important; }
-        .aside__item-color, .contacts-link { color: #334155 !important; }
-        .my-photo { border-color: #e2e8f0 !important; }
-        .main__container { padding: 40px 50px !important; }
-        .download-btn, .buttons { display: none !important; }
-        .work::before, .education__item::before { border-color: #fff !important; }
-      }
+@media print {
+  @page { 
+    margin: 10mm 15mm; 
+  }
+  
+  body { 
+    background: #fff; 
+    color: #1e293b; 
+    padding: 0; 
+  }
+
+  .visually-hidden { 
+    display: none !important; 
+  }
+
+  .wrapper {
+    display: flex !important;
+    flex-direction: column; 
+    max-width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .sidebar, 
+  .sidebar-content {
+    display: contents !important;
+  }
+
+  .header {
+    order: 1 !important;
+    margin-bottom: 5px !important;
+    padding-bottom: 0 !important;
+    border: none !important;
+  }
+
+  .contacts-container {
+    order: 2 !important;
+    display: block !important;
+    width: 100% !important;
+    margin: 0 0 20px 0 !important;
+    padding-bottom: 15px !important;
+    border-bottom: 2px solid #e2e8f0 !important;
+  }
+
+  .contacts-container .contact {
+    display: inline-block !important;
+    margin: 0 15px 5px 0 !important;
+  }
+
+  .contacts-link-type {
+    display: inline !important;
+    margin-right: 4px !important;
+    color: #64748b !important;
+  }
+
+  .contacts-link-type::after { 
+    content: ":"; 
+  }
+
+  .contacts-link {
+    display: inline !important;
+    color: #0f172a !important;
+    font-weight: 600 !important;
+  }
+
+  .main__container { 
+    order: 3 !important; 
+    padding: 0 !important; 
+    flex: none;
+  }
+
+  .aside-container {
+    order: 4 !important;
+    width: 100% !important;
+    margin: 0 0 10px 0 !important;
+  }
+
+  .sidebar .section__title {
+    font-size: 16px !important;
+    margin-bottom: 5px !important;
+    padding: 0 !important;
+    border: none !important;
+    color: #0f172a !important;
+  }
+
+
+  .aside__list { 
+    display: block !important; 
+    padding: 0 !important; 
+    margin: 0 !important; 
+  }
+
+  .aside__item { 
+    display: inline !important; 
+    margin: 0 !important; 
+  }
+
+  .aside__item::after { 
+    content: " • "; 
+    color: #94a3b8; 
+    margin: 0 6px; 
+  }
+
+  .aside__item:last-child::after { 
+    content: ""; 
+  }
+
+  .aside__item-color { 
+    color: #334155 !important; 
+  }
+
+  section > ul {
+    border-left: none !important;
+    padding-left: 20px !important; 
+    margin-left: 0 !important;
+    list-style-type: disc !important; 
+  }
+
+  .work::before, 
+  .education__item::before { 
+    display: none !important; 
+  }
+
+  .section__title { 
+    border-bottom: none !important; 
+  }
+
+  .download-btn, 
+  .buttons, 
+  .skip-link, 
+  .my-photo, 
+  .social { 
+    display: none !important; 
+  }
+
+
+  .section { 
+    margin-bottom: 20px !important; 
+  }
+
+  .work { 
+    margin-bottom: 15px !important; 
+  }
+
+  ul.work-tasks { 
+    margin-bottom: 10px !important;
+    margin-left: 20px !important;
+   }
+
+
+  .education__item { 
+    margin-bottom: 12px !important; 
+  }
+
+  .education__item .specialty { 
+    font-weight: 700 !important; 
+    font-size: 16px !important; 
+    color: #0f172a !important; 
+    margin-bottom: 2px !important; 
+  }
+
+  .education__item .university { 
+    font-weight: 500 !important; 
+    font-size: 15px !important; 
+    color: #334155 !important; 
+    margin-bottom: 2px !important; 
+  }
+
+  .education__item .data { 
+    display: block !important; 
+    font-size: 14px !important; color: #64748b !important; 
+  }
+
+
+  .work, .education__item, .aside-container, .contacts-container { 
+    break-inside: avoid; 
+  }
+
+  .header { 
+    break-after: avoid; 
+  }
+
+  a { 
+    text-decoration: none !important; 
+    color: inherit !important; 
+  }
+}
