@@ -137,9 +137,15 @@
         align-items: flex-start;
         flex-direction: column;
         gap: 15px;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         border-bottom: 2px solid #f1f5f9;
-        padding-bottom: 30px;
+        padding-bottom: 15px;
+        width: 100%;
+        gap: 25px;
+      }
+
+      .title {
+        flex-grow: 1;
       }
 
       .position {
@@ -220,6 +226,11 @@
 
       .university {
         margin-bottom: 5px;
+        display: block;
+      }
+
+      .university .data {
+        display: inline;
       }
 
       .work__position-task {
@@ -256,7 +267,7 @@
       }
 
       .education__item:not(:last-child) {
-        margin-bottom: 30px;
+        margin-bottom: 36px;
       }
 
       .buttons {
@@ -348,13 +359,13 @@
         }
 
         .name { 
-          font-size: 36px; 
+          font-size: 30px; 
         }
       }
 
 @media print {
   @page { 
-    margin: 10mm 15mm; 
+    margin: 8mm 14mm 8mm; 
   }
   
   body { 
@@ -374,6 +385,10 @@
     box-shadow: none;
     border-radius: 0;
     margin: 0;
+  }
+
+  .name {
+    margin-bottom: 15px !important;
   }
 
   .sidebar, 
@@ -431,6 +446,7 @@
   }
 
   .sidebar .section__title {
+    display: inline !important;
     font-size: 16px !important;
     margin-bottom: 5px !important;
     padding: 0 !important;
@@ -438,9 +454,12 @@
     color: #0f172a !important;
   }
 
+  .sidebar .section__title::after { 
+    content: ":"; 
+  }
 
   .aside__list { 
-    display: block !important; 
+    display: inline !important; 
     padding: 0 !important; 
     margin: 0 !important; 
   }
@@ -451,9 +470,9 @@
   }
 
   .aside__item::after { 
-    content: " • "; 
+    content: ", "; 
     color: #94a3b8; 
-    margin: 0 6px; 
+    margin: 0 3px 0 0 !important; 
   }
 
   .aside__item:last-child::after { 
@@ -476,8 +495,13 @@
     display: none !important; 
   }
 
+  .work__position {
+    margin-bottom: 5px !important;
+  }
+
   .section__title { 
-    border-bottom: none !important; 
+    border-bottom: none !important;
+    margin-bottom: 15px !important;
   }
 
   .download-btn, 
@@ -490,21 +514,21 @@
 
 
   .section { 
-    margin-bottom: 20px !important; 
+    margin-bottom: 16px !important; 
   }
 
   .work { 
-    margin-bottom: 15px !important; 
+    margin-bottom: 14px !important; 
   }
 
   ul.work-tasks { 
-    margin-bottom: 10px !important;
+    margin-bottom: 6px !important;
     margin-left: 20px !important;
    }
 
 
   .education__item { 
-    margin-bottom: 12px !important; 
+    margin-bottom: 8px !important; 
   }
 
   .education__item .specialty { 
@@ -522,7 +546,6 @@
   }
 
   .education__item .data { 
-    display: block !important; 
     font-size: 14px !important; color: #64748b !important; 
   }
 
@@ -538,5 +561,9 @@
   a { 
     text-decoration: none !important; 
     color: inherit !important; 
+  }
+
+  .pdf-hide {
+    display: none;
   }
 }
